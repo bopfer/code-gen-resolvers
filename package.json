@@ -1,0 +1,37 @@
+{
+  "name": "code-gen-resolvers",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.5.0",
+    "apollo-server-express": "^2.5.0",
+    "graphql": "^14.3.0",
+    "graphql-tools": "^4.0.4",
+    "ts-node": "^8.1.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/add": "^1.1.3",
+    "@graphql-codegen/cli": "^1.1.3",
+    "@graphql-codegen/typescript": "^1.1.3",
+    "@graphql-codegen/typescript-operations": "^1.1.3",
+    "@graphql-codegen/typescript-resolvers": "^1.1.3",
+    "@types/graphql": "^14.2.0",
+    "@types/node": "^12.0.1",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "nodemon": "^1.19.0",
+    "typescript": "^3.4.5"
+  },
+  "scripts": {
+    "gqlCodegen": "gql-gen -c graphql.codegen.yml",
+    "start": "NODE_ENV=development nodemon --exec ts-node --files --log-error src/server.ts"
+  }
+}
